@@ -4,6 +4,7 @@ import axios from 'axios';
 import * as yup from 'yup';
 import schema from './formSchema';
 import Form from './Form';
+import Warrior from './Warrior';
 
 const initialFormValues = {
   username: '',
@@ -98,7 +99,7 @@ function App() {
 
       {warriors.map(warrior => {
         return (
-          <Warrior key={warrior.id} info={warrior}/>
+          <Warrior key={warrior.id} values={formValues}/>
         )
       })}
     </div>
