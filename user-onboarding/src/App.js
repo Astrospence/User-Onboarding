@@ -101,7 +101,7 @@ function App() {
         <h2>Warrior Registry</h2>
         {warriors.map(warrior => {
           return (
-            <Warrior values={warrior}/>
+            <Warrior key={warrior.id} values={warrior}/>
           )
         })}
       </div>

@@ -18,7 +18,7 @@ export default function Form(props) {
         <form className="form-container" onSubmit={onSubmit}>
 
             <div className="form-section submit">
-                <h2>Join the Cause</h2>
+                <h1>Join the Cause</h1>
                 <button disabled={disabled}>Submit</button>
                 <div className="errors">
                     <div>{errors.username}</div>
@@ -29,49 +29,49 @@ export default function Form(props) {
             </div>
 
             <div className="form-section inputs">
-                <label>Username&nbsp;
+                <label className="labels">Username&nbsp;
                     <input 
                         type="text"
                         name="username"
                         value={values.username}
                         onChange={onChange}
-                    />
+                    /><br></br>
                 </label>
 
-                <label>Email&nbsp;
+                <label className="labels">Email&nbsp;
                     <input
                         type="text"
                         name="email"
                         value={values.email}
                         onChange={onChange}
-                    />
+                    /><br></br>
                 </label>
 
-                <label>Password&nbsp;
+                <label className="labels">Password&nbsp;
                     <input
                         type="text"
                         name="password"
                         value={values.password}
                         onChange={onChange}
-                    />
+                    /><br></br>
                 </label>
 
-                <label>Warrior Class&nbsp;
+                <label className="labels">Warrior Class&nbsp;
                     <select
                         name="warriorClass"
                         value={values.warriorClass}
                         onChange={onChange}
                     >
                         <option value="">-Choose-</option>
-                        <option value="swordsman">Swordsman</option>
-                        <option value="archer">Archer</option>
-                        <option value="necromancer">Necromancer</option>
-                        <option value="cleric">Cleric</option>
-                        <option value="mage">Mage</option>
-                    </select>
+                        <option value="Swordsman">Swordsman</option>
+                        <option value="Archer">Archer</option>
+                        <option value="Necromancer">Necromancer</option>
+                        <option value="Cleric">Cleric</option>
+                        <option value="Mage">Mage</option>
+                    </select><br></br>
                 </label>
 
-                <label>I read and agree to the Terms of Service&nbsp;
+                <label className="labels">I read and agree to the Terms of Service&nbsp;
                     <input
                         type="checkbox"
                         name="terms"
