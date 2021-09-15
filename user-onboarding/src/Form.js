@@ -4,11 +4,14 @@ export default function Form(props) {
     const { values, change, submit, disabled, errors } = props;
 
     const onSubmit = evt => {
-
+        evt.preventDefault();
+        submit();
     }
 
     const onChange = evt => {
-
+        const { type, name, value, checked } = evt.target
+        const valueToUse = type === 'checkbox' ? checked : value;
+        change(name, valueToUse);
     }
 
     return (
@@ -59,7 +62,7 @@ export default function Form(props) {
                         value={values.warriorClass}
                         onChange={onChange}
                     >
-                        <option value="">-Declare Your Warrior Class-</option>
+                        <option value="">-Choose-</option>
                         <option value="swordsman">Swordsman</option>
                         <option value="archer">Archer</option>
                         <option value="necromancer">Necromancer</option>
