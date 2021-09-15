@@ -17,7 +17,7 @@ const formSchema = yup.object().shape({
     terms: yup.boolean(),
     warriorClass: yup
         .string()
-        .oneOf(['swordsman', 'archer', 'necromancer', 'cleric', 'mage'], 'You must declare a Warrior Class')
+        .oneOf(['Swordsman', 'Archer', 'Necromancer', 'Cleric', 'Mage'], 'You must declare a Warrior Class')
 })
 
 export default formSchema;
