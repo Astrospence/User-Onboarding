@@ -5,7 +5,7 @@ export default function Warrior(props) {
     
     return(
         <div className="warrior-container">
-            <h2>{values.username}</h2>
+            <h3>{values.username}</h3>
             <p>Class: {values.warriorClass}</p>
             <p>Rally to the Cause: {values.email}</p>
         </div>

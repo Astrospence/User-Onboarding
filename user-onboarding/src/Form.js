@@ -9,7 +9,7 @@ export default function Form(props) {
     }
 
     const onChange = evt => {
-        const { type, name, value, checked } = evt.target
+        const { type, name, value, checked } = evt.target;
         const valueToUse = type === 'checkbox' ? checked : value;
         change(name, valueToUse);
     }
@@ -18,7 +18,7 @@ export default function Form(props) {
         <form className="form-container" onSubmit={onSubmit}>
 
             <div className="form-section submit">
-                <h2>Create Your Gaming Profile</h2>
+                <h2>Join the Cause</h2>
                 <button disabled={disabled}>Submit</button>
                 <div className="errors">
                     <div>{errors.username}</div>

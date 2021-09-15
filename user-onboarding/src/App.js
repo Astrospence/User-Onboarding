@@ -97,11 +97,14 @@ function App() {
         errors={formErrors}
       />
 
-      {warriors.map(warrior => {
-        return (
-          <Warrior key={warrior.id} values={formValues}/>
-        )
-      })}
+      <div>
+        <h2>Warrior Registry</h2>
+        {warriors.map(warrior => {
+          return (
+            <Warrior values={warrior}/>
+          )
+        })}
+      </div>
     </div>
   );
 }
