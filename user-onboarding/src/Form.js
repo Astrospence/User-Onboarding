@@ -53,6 +53,21 @@ export default function Form(props) {
                     />
                 </label>
 
+                <label>Warrior Class&nbsp;
+                    <select
+                        name="warriorClass"
+                        value={values.warriorClass}
+                        onChange={onChange}
+                    >
+                        <option value="">-Declare Your Warrior Class-</option>
+                        <option value="swordsman">Swordsman</option>
+                        <option value="archer">Archer</option>
+                        <option value="necromancer">Necromancer</option>
+                        <option value="cleric">Cleric</option>
+                        <option value="mage">Mage</option>
+                    </select>
+                </label>
+
                 <label>I read and agree to the Terms of Service&nbsp;
                     <input
                         type="checkbox"
