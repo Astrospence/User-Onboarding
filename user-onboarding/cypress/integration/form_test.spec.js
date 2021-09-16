@@ -66,8 +66,25 @@ describe("User-Onboarding App", () => {
         })
     })
 
+    describe('Input validation functions', () => {
+        it('username, email, and password each display errors if invalid', () => {
+            usernameInput().type('blah');
+            cy.contains('Username must be at least 5 characters long');
+            usernameInput().clear();
+            cy.contains('Username is required');
+            emailInput().type('blah');
+            cy.contains('Must be a valid email address');
+            emailInput().clear();
+            cy.contains('Email is required');
+            passwordInput().type('blah');
+            cy.contains('Password must be at least 8 characters long');
+            passwordInput().clear();
+            cy.contains('Password is required');
+        })
+    })
+
     describe('User can submit form and new Warrior is created', () => {
-        it('submit button enables once all inputs have valid values', () => {
+        it('submit button enables once all inputs have valid values, and a new Warrior is added to the registry', () => {
             //simulate new entry
             usernameInput().type('Astrospence');
             emailInput().type('mage@mage.com');

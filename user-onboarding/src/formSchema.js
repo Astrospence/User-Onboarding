@@ -8,12 +8,13 @@ const formSchema = yup.object().shape({
         .min(5, 'Username must be at least 5 characters long'),
     email: yup
         .string()
-        .email('Must be a valid email address')
-        .required('Email is required'),
+        .trim()
+        .required('Email is required')
+        .email('Must be a valid email address'),
     password: yup
         .string()
-        .min(8, 'Password must be at least 8 characters long')
-        .required('Password is required'),
+        .required('Password is required')
+        .min(8, 'Password must be at least 8 characters long'),
     terms: yup.boolean(),
     warriorClass: yup
         .string()
