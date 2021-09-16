@@ -36,7 +36,16 @@ describe("User-Onboarding App", () => {
                 .should('have.value', 'magesrock');
         })
 
-        
+        it('can select a warrior class', () => {
+            warriorClass()
+                .should('have.value', '')
+                .select('Swordsman')
+                .select('Archer')
+                .select('Necromancer')
+                .select('Cleric')
+                .select('Mage');
+                
+        })
     })
 
 })
