@@ -63,3 +63,7 @@
   padding: 0.1% 2%;
   text-align: left;
 }
+
+.errors {
+  color: red;
+}

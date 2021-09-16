@@ -19,7 +19,7 @@ export default function Form(props) {
 
             <div className="form-section submit">
                 <h1>Join the Cause</h1>
-                <button disabled={disabled}>Submit</button>
+                <button disabled={disabled} data-cy="submit">Submit</button>
                 <div className="errors">
                     <div>{errors.username}</div>
                     <div>{errors.email}</div>
@@ -35,6 +35,7 @@ export default function Form(props) {
                         name="username"
                         value={values.username}
                         onChange={onChange}
+                        data-cy="username"
                     /><br></br>
                 </label>
 
@@ -44,6 +45,7 @@ export default function Form(props) {
                         name="email"
                         value={values.email}
                         onChange={onChange}
+                        data-cy="email"
                     /><br></br>
                 </label>
 
@@ -53,6 +55,7 @@ export default function Form(props) {
                         name="password"
                         value={values.password}
                         onChange={onChange}
+                        data-cy="password"
                     /><br></br>
                 </label>
 
@@ -61,6 +64,7 @@ export default function Form(props) {
                         name="warriorClass"
                         value={values.warriorClass}
                         onChange={onChange}
+                        data-cy="warriorClass"
                     >
                         <option value="">-Choose-</option>
                         <option value="Swordsman">Swordsman</option>
@@ -77,6 +81,7 @@ export default function Form(props) {
                         name="terms"
                         checked={values.terms}
                         onChange={onChange}
+                        data-cy="terms"
                     />
                 </label>
             </div>
