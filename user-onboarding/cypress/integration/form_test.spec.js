@@ -26,18 +26,14 @@ describe("User-Onboarding App", () => {
                 //then check functionality
                 .type('Astrospence')
                 .should('have.value', 'Astrospence');
-
+            //continue pattern
             emailInput()
-                //first check that it initializes with no value
                 .should('have.value', '')
-                //then check functionality
                 .type('mage@mage.com')
                 .should('have.value', 'mage@mage.com');
 
             passwordInput()
-                //first check that it initializes with no value
                 .should('have.value', '')
-                //then check functionality
                 .type('magesrock')
                 .should('have.value', 'magesrock');
         })
@@ -66,12 +62,15 @@ describe("User-Onboarding App", () => {
         })
     })
 
-    describe('Input validation functions', () => {
+    describe('Form Validation functions correctly', () => {
         it('username, email, and password each display errors if invalid', () => {
+            //first enter an invalid username and check if error displays
             usernameInput().type('blah');
             cy.contains('Username must be at least 5 characters long');
+            //then clear username input and check if error displays
             usernameInput().clear();
             cy.contains('Username is required');
+            //continue pattern
             emailInput().type('blah');
             cy.contains('Must be a valid email address');
             emailInput().clear();
